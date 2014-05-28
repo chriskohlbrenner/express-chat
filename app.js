@@ -15,7 +15,9 @@ var sockjs = require('sockjs');
 
 var connections = [];
 
-var chat = sockjs.createServer();
+var sockjs_opts = {sockjs_url: "http://cdn.sockjs.org/sockjs-0.3.min.js",
+                   websocket: false};
+var chat = sockjs.createServer(sockjs_opts);
 chat.on('connection', function(conn) {
     connections.push(conn);
     var number = connections.length;
