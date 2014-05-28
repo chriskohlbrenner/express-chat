@@ -58,7 +58,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 chat.installHandlers(server, {prefix:'/chat'});
 
 // Work around Heroku issues
-service.on('connection', function(conn){
+chat.on('connection', function(conn){
     console.log(" [.] open event received");
     var t = setInterval(function(){
         try{
