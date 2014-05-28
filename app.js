@@ -70,5 +70,6 @@ chat.on('connection', function(conn){
     conn.on('close', function() {
         console.log(" [.] close event received");
         clearInterval(t);
+        t = null;
     });
 });
