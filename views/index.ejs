@@ -9,18 +9,21 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>Welcome to <%= title %>, a simple chat application built using: Node with Express as the server side framework, AngularJS for client side rendering, and SockJS for WebSocket emulation.</p>
+    <p>Type any text into the input field to get started. Any user can visit this web page to chat with you.</p>
     <div ng-controller="ChatCtrl">
-    
       <ul>
         <li ng-repeat="message in messages track by $index">{{message}}</li>
       </ul>
-
       <form ng-submit="sendMessage()">
-        <input type="text" ng-model="messageText" placeholder="Type your message here" />
+        <input id="chat-field" type="text" ng-model="messageText" placeholder="Type your message here" />
         <input type="submit" value="Send" />
       </form>
     </div>
-
+    <div id="footer">
+      <div id="footer-text">
+        <p>Built by <a href="https://github.com/chriskohlbrenner">Chris Kohlbrenner</a> - <a href="https://chriskohlbrenner.github.io/">chriskohlbrenner.github.io</a></p>
+      </div>
+    </div>
   </body>
 </html>

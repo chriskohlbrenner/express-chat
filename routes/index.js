@@ -9,5 +9,5 @@
 // module.exports = router;
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'ExpressChat' });
 };
