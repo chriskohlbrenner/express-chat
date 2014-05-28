@@ -2,7 +2,9 @@
 <html ng-app>
   <head>
     <script src="http://cdn.sockjs.org/sockjs-0.3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js""></script>
+    <script src="javascripts/scripts.js"></script>
     <script src="javascripts/chat.js"></script>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -19,6 +21,8 @@
         <input id="chat-field" type="text" ng-model="messageText" placeholder="Type your message here" />
         <input type="submit" value="Send" />
       </form>
+      <br>
+      <br>
     </div>
     <div id="footer">
       <div id="footer-text">
